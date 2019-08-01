@@ -4,8 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Track
-{
+public class Track {
     @Id
     private int id;
     private String name;
