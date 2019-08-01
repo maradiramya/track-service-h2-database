@@ -32,13 +32,13 @@ public class TrackServiceImpl implements TrackService
         Track retrivedTrack=trackRepository.findById(id).get();
         return retrivedTrack;
     }
-
-    @Override
-    public List<Track> getAllTrack()
-    {
-        List<Track> retriveAllTrack=trackRepository.findAll();
-        return retriveAllTrack;
-    }
+//
+//    @Override
+//    public List<Track> getAllTrack()
+//    {
+//        List<Track> retriveAllTrack=trackRepository.findAll();
+//        return retriveAllTrack;
+//    }
 
     @Override
     public Track deleteTrackById(int id)
@@ -49,9 +49,12 @@ public class TrackServiceImpl implements TrackService
 
 
     }
-//
-//    @Override
-//    public Track updateTrack(Track track) {
-//        return null;
-//    }
+
+    @Override
+    public Track updateTrack(Track track)
+    {
+        Track updateTrack=trackRepository.save(track);
+
+        return updateTrack;
+    }
 }
