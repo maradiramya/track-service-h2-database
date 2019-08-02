@@ -34,7 +34,7 @@ public class TrackController {
         return new ResponseEntity<>(retriveTrack, HttpStatus.OK);
     }
 
-    @GetMapping("track")
+    @GetMapping("tracks")
     public ResponseEntity<?> getAllTracks() {
         return new ResponseEntity<List<Track>>(trackService.getAllTrack(), HttpStatus.OK);
     }
